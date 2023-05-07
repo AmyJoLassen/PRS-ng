@@ -1,0 +1,42 @@
+<app-menu> </app-menu>
+<div><span class="h3">New User Details</span></div> <br>
+<body>
+    <div class="form-container">
+        <form class="form">
+            <table class="table table-sm">
+            <tr>
+                <td>First Name: </td>
+                <td><input [(ngModel)]="user.firstname" class="rounded" type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Last Name: </td>
+                <td><input [(ngModel)]="user.lastname" class="rounded" type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Phone Number: </td>
+                <td><input [(ngModel)]="user.phone" class="rounded" type="text"></td>
+            </tr>
+                
+            <tr>
+                <td>Email:</td>
+                <td><input [(ngModel)]="user.email" class="rounded" type="text"></td>
+            </tr>
+                
+            <tr>
+                <td>Username:</td>
+                <td><input [(ngModel)]="user.username" class="rounded" type="text"></td>
+            </tr>
+                
+            <tr>
+                <td>Password:</td>
+                <td><input [(ngModel)]="user.password" class="rounded" type="text"></td>
+            </tr>
+            </table>
+        </form>
+        <br> <br>
+        <button (click)="saveUser()">Save</button>
+    </div>
+</body>
+<app-footer></app-footer>

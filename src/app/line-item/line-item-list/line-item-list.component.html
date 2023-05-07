@@ -1,0 +1,25 @@
+<h1>Line Items:</h1>
+<thead>
+    <tr>
+        <th>Part Number</th>
+        <th>Product Description</th>
+        <th>Vendor</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let lineItem of lineItems">
+        <td>{{lineItem.product.partNbr}}</td>
+        <td>{{lineItem.product.name}}</td>
+        <td>{{lineItem.product.vendor.name}}</td>
+        <td>{{lineItem.product.price}}</td>
+        <td>{{lineItem.quantity}}</td>
+        <td>{{lineItem.product.price * lineItem.quantity}}</td>
+        <td>
+            <img class="icon" src="/assets/info.png" alt="" routerLink="/line-item/detail/{{lineItem.id}}"></td>
+        <td>
+            <img class="icon" src="/assets/pencil.png" alt="" routerLink="/line-item/edit/{{lineItem.id}}" ></td>
+    </tr>
+</tbody>

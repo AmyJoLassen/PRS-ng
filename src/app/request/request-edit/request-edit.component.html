@@ -1,0 +1,54 @@
+<app-menu> </app-menu>
+<div>
+    <span id="pageTitle">Request Edit</span>
+<br>
+<body>
+    <div class="form-container">
+        <form class="form">
+                <div class="form-group">
+                    <label for="submittedDate">SubmittedDate: </label>
+                    <input type="string" id="submittedDate" class="form-control" [(ngModel)]="request.submittedDate" name="submittedDate">
+                </div>
+
+                <div class="form-group">
+                    <label for="dateNeeded">Date Needed: </label>
+                    <input type="date" id="dateNeeded" class="form-control" [(ngModel)]="request.dateNeeded" name="dateNeeded">
+                </div>
+
+                <div class="form-group">
+                    <label for="user">User: </label>
+                    <input type="text" id="user" class="form-control" [(ngModel)]="request.user.username" name="user">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description: </label>
+                    <input type="text" id="description" class="form-control" [(ngModel)]="request.description" name="description">
+                </div>
+
+                <div class="form-group">
+                    <label for="justification">Justification: </label>
+                    <input type="text" id="justification" class="form-control" [(ngModel)]="request.justification" name="justification">
+                </div>
+
+                <div class="form-group">
+                    <label for="deliveryMode">Delivery Mode: </label>
+                    <input type="text" id="deliveryMode" class="form-control" [(ngModel)]="request.deliveryMode" name="deliveryMode">
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Status: </label>
+                    <input type="text" id="status" class="form-control" [(ngModel)]="request.status" name="status">
+                </div>
+
+                <div class="form-group">
+                    <label for="rejectionReason">Rejection Reason: </label>
+                    <input type="text" id="rejectionReason" class="form-control" [(ngModel)]="request.rejectionReason" name="rejectionReason">
+                </div>
+                <br> <br>
+                          
+            <button type="save">Save</button>
+        </form>
+    </div>
+</body>
+<app-footer></app-footer>
+

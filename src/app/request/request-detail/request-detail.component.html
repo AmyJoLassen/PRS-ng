@@ -1,0 +1,78 @@
+<app-menu> </app-menu>
+<div>
+    <span id="pageTitle">Request Details</span>
+<br>
+<body>
+    <div class="form-container">
+        <form class="form">
+
+            <label for="submittedDate">Submitted Date: </label>
+            <input type="text" name="submittedDate" placeholder="{{request.submittedDate}}">
+            <br>
+
+            <label for="dateNeeded">Date Needed: </label>
+            <input type="text" name="dateNeeded" placeholder="{{request.dateNeeded}}">
+            <br>
+
+            <label for="user">Username: </label>
+            <input type="text" name="user" placeholder="{{request.user.username}}">
+            <br>
+
+            <label for="description">Description: </label>
+            <input type="text" name="description" placeholder="{{request.description}}">
+            <br>
+              
+            <label for="justification">Justification: </label>
+            <input type="text" name="justification" placeholder="{{request.justification}}">
+            <br>
+
+            <label for="deliveryMode">Delivery Mode: </label>
+            <input type="text" name="deliveryMode" placeholder="{{request.deliveryMode}}">
+            <br>
+         
+            <label for="status">Status: </label>
+            <input type="text" name="status" placeholder="{{request.status}}">
+            <br>
+
+            <label for="rejectionReason">Reason for Rejection: </label>
+            <input type="text" name="rejectionReason" placeholder="{{request.rejectionReason}}">
+            <br>
+
+            <h4>List of Line Items:</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Part #</th>
+                                <th scope="col">Product Description</th>
+                                <th scope="col">Vendor</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Total</th>
+                            </tr> 
+                        </thead>
+                        <tbody> 
+                            <tr *ngFor="let request of request">
+                                <td scope="row">{{request.partNbr}}</td>
+                                <td scope="row">{{request.description}}</td>
+                                <td scope="row">{{request.vendor}}</td>
+                                <td scope="row">{{request.price}}</td>
+                                <td scope="row">{{request.quantity}}</td>
+                                <td scope="row">{{request.total}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+            <br> <br>
+
+            <div> 
+                <a routerLink = "/request/edit/{{request.id}}">
+                    <button type="edit">Edit</button>
+                </a>
+            </div>
+            <div>
+                <button type="delete">Delete</button>
+            </div>
+        </form>
+    </div>
+</body>
+<app-footer></app-footer>

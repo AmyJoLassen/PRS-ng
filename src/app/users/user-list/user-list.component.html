@@ -1,0 +1,50 @@
+<app-menu></app-menu>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{pageTitle}}</h5>
+        <a routerLink="/user/create">
+            <button>CREATE NEW USER</button>
+        </a> <br><br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Username</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Email Address</th>
+                    <th scope="col">Admin</th>
+                    <th scope="col">Reviewer</th>
+                    <th scope="col">Detail</th>
+                    <th scope="col">Edit</th>
+                </tr> 
+            </thead>
+            <tbody> 
+                <tr *ngFor="let user of users">
+                    <td scope="row">{{user.username}}</td>
+                    <td scope="row">{{user.firstname}}</td>
+                    <td scope="row">{{user.lastname}}</td>
+                    <td scope="row">{{user.phone}}</td>
+                    <td scope="row">{{user.email}}</td>
+                    <td scope="row">{{user.isAdmin}}</td>
+                    <td scope="row">{{user.isReviewer}}</td>
+                    <td>
+                        <div>
+                            <a routerLink="/user/detail/{{user.id}}">
+                                <img class="icon" src="/assets/info.png"/> 
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <a routerLink = "/user/edit/{{user.id}}"> 
+                                <img class ="icon" src="/assets/pencil.png"/>
+                            </a>
+                        </div>                 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<app-footer></app-footer>

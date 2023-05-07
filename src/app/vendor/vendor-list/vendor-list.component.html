@@ -1,0 +1,55 @@
+<app-menu></app-menu>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{pageTitle}}</h5>
+        <a routerLink="/vendor/create">
+            <button>CREATE NEW VENDOR</button>
+        </a> <br><br>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Code</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">City</th>
+                    <th scope="col">State</th>
+                    <th scope="col">Zip</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Detail</th>
+                    <th scope="col">Edit</th>
+                </tr> 
+            </thead>
+            <tbody> 
+                <tr *ngFor="let vendor of vendors">
+                    <td scope="row">{{vendor.id}}</td>
+                    <td scope="row">{{vendor.code}}</td>
+                    <td scope="row">{{vendor.name}}</td>
+                    <td scope="row">{{vendor.address}}</td>
+                    <td scope="row">{{vendor.city}}</td>
+                    <td scope="row">{{vendor.state}}</td>
+                    <td scope="row">{{vendor.zip}}</td>
+                    <td scope="row">{{vendor.phone}}</td>
+                    <td scope="row">{{vendor.email}}</td>
+                    <td>
+                        <div>
+                            <a routerLink="/vendor/detail/{{vendor.id}}">
+                                <img class ="icon" src="\assets\info.png"/>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <a routerLink = "/vendor/edit/{{vendor.id}}">
+                                <img class ="icon" src="\assets\pencil.png"/>
+                            </a>
+                        </div>                 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<app-footer></app-footer>

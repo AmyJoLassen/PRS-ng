@@ -1,0 +1,7 @@
+.menu {
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}

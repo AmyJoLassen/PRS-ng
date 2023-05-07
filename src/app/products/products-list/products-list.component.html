@@ -1,0 +1,48 @@
+<app-menu></app-menu>
+<a routerLink="/product/create">
+    <button>CREATE NEW PRODUCT</button>
+</a> <br><br>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{pageTitle}}</h5>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Part Number</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Unit</th>
+                    <th scope="col">Photo Path</th>
+                    <th scope="col">Vendor</th>
+                    <th scope="col">Detail</th>
+                    <th scope="col">Edit</th>
+                </tr> 
+            </thead>
+            <tbody> 
+                <tr *ngFor="let product of products">
+                    <td scope="row">{{product.partNbr}}</td>
+                    <td scope="row">{{product.name}}</td>
+                    <td scope="row">{{product.price}}</td>
+                    <td scope="row">{{product.unit}}</td>
+                    <td scope="row">{{product.photopath}}</td>
+                    <td scope="row">{{product.vendor.name}}</td>
+                    <td>
+                        <div>
+                            <a routerLink="/product/detail/{{product.id}}">
+                                <img class ="icon" src="\assets\info.png"/> 
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <a routerLink = "/product/edit/{{product.id}}"> 
+                                <img class ="icon" src="\assets\pencil.png"/>
+                            </a>
+                        </div>                 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<app-footer></app-footer>

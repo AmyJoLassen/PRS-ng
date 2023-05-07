@@ -1,0 +1,40 @@
+<app-menu></app-menu>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{pageTitle}}</h5>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Description</th>
+                    <th scope="col">Justification</th>
+                    <th scope="col">Rejection Reason</th>
+                    <th scope="col">Delivery Mode</th>
+                    <th scope="col">Submitted Date</th>
+                    <th scope="col">Date Needed</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Review</th>
+                </tr> 
+            </thead>
+            <tbody> 
+                <tr *ngFor="let request of requests">
+                    <td scope="row">{{request.description}}</td>
+                    <td scope="row">{{request.justification}}</td>
+                    <td scope="row">{{request.rejectionReason}}</td>
+                    <td scope="row">{{request.deliveryMode}}</td>
+                    <td scope="row">{{request.submittedDate}}</td>
+                    <td scope="row">{{request.dateNeeded}}</td>
+                    <td scope="row">{{request.status}}</td>
+                    <td scope="row">{{request.total}}</td>
+                    <td>
+                        <div>
+                            <a routerLink="/review/detail/{{request.id}}">
+                                <img class="icon" src="\assets\review-glasses.png"/> 
+                            </a>
+                        </div>          
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

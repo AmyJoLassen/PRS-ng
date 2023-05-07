@@ -1,0 +1,62 @@
+<app-menu> </app-menu>
+<div><span class="h3">User Details</span></div> <br>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td>First Name:</td>
+                    <td>
+                        <input [(ngModel)]="user.firstname" type="text" disabled> 
+                    </td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                    <td>
+                        <input [(ngModel)]="user.lastname" type="text" disabled> 
+                    </td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                    <td>
+                        <input [(ngModel)]="user.phone" type="text" disabled> 
+                    </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                    <td>
+                        <input [(ngModel)]="user.email" type="text" disabled> 
+                    </td>
+            </tr>
+            <tr>
+                <td>Username:</td>
+                    <td>
+                        <input [(ngModel)]="user.username" type="text" disabled> 
+                    </td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                    <td>
+                        <input [(ngModel)]="user.password" type="text" disabled> 
+                    </td>
+            </tr>
+            <tr>
+                <td>Reviewer:</td>
+                    <td>
+                        <input [(ngModel)]="user.isReviewer" type="checkbox" [checked]="user.isReviewer" disabled> 
+    
+                    </td>
+            </tr>
+            <tr>
+                <td>Admin:</td>
+                    <td>
+                        <input [(ngModel)]="user.isAdmin" type="checkbox" [checked]="user.isAdmin" disabled> 
+    
+                    </td>
+            </tr>
+        </table>
+        <a><button>Edit</button></a>
+        <a><button>Delete</button></a>
+         <br><br>
+    </div>
+</body>
+<app-footer></app-footer>
